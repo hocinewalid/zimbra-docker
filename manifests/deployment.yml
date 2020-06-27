@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "clusteraks01-725c"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "clusteraks01-725c"
+    spec:
+      containers:
+        - name: "clusteraks01-725c"
+          image: "my1azurecontainerregistry.azurecr.io/clusteraks01"
+          ports:
+          - containerPort: 22
